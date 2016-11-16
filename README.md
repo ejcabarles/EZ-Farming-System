@@ -15,7 +15,7 @@
 3. Download local copy.
 
 	```
-	git clone https://github.com/aadevera/project-upload.git
+	git clone https://github.com/ejcabarles/EZ-Farming-System.git
 	```
 
 4. Go to the newly created directory
