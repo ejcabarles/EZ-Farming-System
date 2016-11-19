@@ -79,6 +79,7 @@ CREATE TABLE `request` (
   `planneddate` date DEFAULT NULL,
   `actualdate` date DEFAULT NULL,
   `status` varchar(10) DEFAULT NULL,
+  `applicationtype` varchar(50) DEFAULT NULL,
   `userid` int(4) NOT NULL,
   `fertilizerid` int(4) DEFAULT NULL,
   PRIMARY KEY (`requestid`),
