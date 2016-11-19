@@ -24,7 +24,7 @@ DROP TABLE IF EXISTS `fertilizer`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `fertilizer` (
   `fertilizerid` int(4) NOT NULL AUTO_INCREMENT,
-  `fertilizerbrand` varchar(20) DEFAULT NULL,
+  `fertilizername` varchar(20) DEFAULT NULL,
   `fertilizertype` varchar(20) DEFAULT NULL,
   `nitrogen` tinyint(2) DEFAULT NULL,
   `phosphorus` tinyint(2) DEFAULT NULL,
