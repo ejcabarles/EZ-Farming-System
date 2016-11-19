@@ -21,7 +21,7 @@
 4. Go to the newly created directory
 	
 	```
-	cd project-upload
+	cd EZ-Farming-System
 	```
 
 5. Install dependencies
