@@ -78,6 +78,7 @@ CREATE TABLE `request` (
   `requestid` int(5) NOT NULL AUTO_INCREMENT,
   `planneddate` date DEFAULT NULL,
   `actualdate` date DEFAULT NULL,
+  `applicationtype` varchar(50) DEFAULT NULL,
   `status` varchar(10) DEFAULT NULL,
   `userid` int(4) NOT NULL,
   `fertilizerid` int(4) DEFAULT NULL,
@@ -97,7 +98,36 @@ LOCK TABLES `request` WRITE;
 /*!40000 ALTER TABLE `request` DISABLE KEYS */;
 /*!40000 ALTER TABLE `request` ENABLE KEYS */;
 UNLOCK TABLES;
+--
+-- Table structure for table `request`
+--
 
+DROP TABLE IF EXISTS `applicationfertilizer`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `applicationfertilizer` (
+  `appid` int(5) NOT NULL AUTO_INCREMENT,
+  `planneddate` date DEFAULT NULL,
+  `actualdate` date DEFAULT NULL,
+  `applicationtype` varchar(50) DEFAULT NULL,
+  `userid` int(4) NOT NULL,
+  `fertilizerid` int(4) DEFAULT NULL,
+  PRIMARY KEY (`appid`),
+  KEY `app_userid_fk` (`userid`),
+  KEY `app_fertilizerid_fk` (`fertilizerid`),
+  CONSTRAINT `app_fertilizerid_fk` FOREIGN KEY (`fertilizerid`) REFERENCES `fertilizer` (`fertilizerid`),
+  CONSTRAINT `app_userid_fk` FOREIGN KEY (`userid`) REFERENCES `user` (`userid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `applicationfertilizer`
+--
+
+LOCK TABLES `applicationfertilizer` WRITE;
+/*!40000 ALTER TABLE `applicationfertilizer` DISABLE KEYS */;
+/*!40000 ALTER TABLE `applicationfertilizer` ENABLE KEYS */;
+UNLOCK TABLES;
 --
 -- Table structure for table `requestplot`
 --
@@ -122,6 +152,31 @@ CREATE TABLE `requestplot` (
 LOCK TABLES `requestplot` WRITE;
 /*!40000 ALTER TABLE `requestplot` DISABLE KEYS */;
 /*!40000 ALTER TABLE `requestplot` ENABLE KEYS */;
+UNLOCK TABLES;
+--
+-- Table structure for table `appplot`
+--
+
+DROP TABLE IF EXISTS `appplot`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `appplot` (
+  `appid` int(5) NOT NULL,
+  `plotid` int(5) NOT NULL,
+  KEY `appplot_appid_fk` (`appid`),
+  KEY `appplot_plotid_fk` (`plotid`),
+  CONSTRAINT `appplot_plotid_fk` FOREIGN KEY (`plotid`) REFERENCES `plot` (`plotid`) ON DELETE CASCADE,
+  CONSTRAINT `appplot_appid_fk` FOREIGN KEY (`appid`) REFERENCES `app` (`appid`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `appplot`
+--
+
+LOCK TABLES `appplot` WRITE;
+/*!40000 ALTER TABLE `appplot` DISABLE KEYS */;
+/*!40000 ALTER TABLE `appplot` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
