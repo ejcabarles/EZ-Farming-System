@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<script type="text/javascript" src="jquery-3.1.1.js"></script>
+	<script type="text/javascript" src="materialize/js/materialize.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<link href="materialize/css/materialize.css" rel="stylesheet"/>
+	<link href="style.css" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<title>Proj</title>
+<head>
+<body class="grey lighten-3">
+	<div class="col s12 m12 l12">
+	    <nav>
+	       <div class="center nav-wrapper grey lighten-3">
+	          <a href="#" class="center header-text">EASY FARMING SYSTEM</a>
+	       </div>
+	    </nav>
+	</div>
+
+	<div class="container" id="plotContainer">
+		<div id="plotLabel">
+			<h6>{{title}}</h6>
+		</div>
+		<div id="plots" class="container white">
+			<button data-target="requestModal" class="btn modal-trigger plot-button large">1</button>
+		</div>
+		<div id="checkBoxGroup">
+			<form>
+				<p>
+			      <input type="checkbox" id="selectAll"/>
+			      <label for="selectAll">Select All</label>
+			    </p>
+			</form>
+		</div>
+	</div>
+
+
+	<div ng-view></div>
+
+	<script type="text/javascript" src="/frontend/app.js"></script>
+	<script type="text/javascript" src="controller/plotController.js"></script>
+	<script type="text/javascript" src="directive/plotDirective.js"></script>
+
+</body>
+</html>

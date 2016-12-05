@@ -1,0 +1,54 @@
+#logSign{
+	width: 50vw;
+	margin-top: auto;
+}
+
+#logSignCont{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.header-text{
+	color: #3f3f3f;
+	font-size: 20px;
+}
+
+#plots {
+	border: 1px solid #cecece;
+	width: 85vw;
+	padding: 10px;
+	height: 55vh;
+	overflow: scroll;
+}
+
+
+
+#requests {
+	border: 1px solid #cecece;
+	width: 85vw;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	height: 55vh;
+	overflow: scroll;
+}
+
+.plot-button{
+	height: 12vh;
+	margin: 20px;
+}
+
+#plotContainer{
+	width: 85vw;
+	margin-top: 10vh;
+	height: 80vh;
+}
+
+body{
+	color: #3f3f3f;
+}
+
+#requestModal{
+	width: 40vw;
+}
