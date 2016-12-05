@@ -1,0 +1,78 @@
+ <div class="container" id="plotContainer">
+	<div id="plotLabel">
+		<h6>PLOTS</h6>
+	</div>
+	<div id="plots" class="container white">
+		<button data-target="requestModal" class="btn modal-trigger plot-button large">1</button>
+	</div>
+	<div id="checkBoxGroup">
+		<form>
+			<p>
+		      <input type="checkbox" id="selectAll"/>
+		      <label for="selectAll">Select All</label>
+		    </p>
+		</form>
+	</div>
+</div>
+
+<!-- Modal Structure -->
+
+<div id="requestModal" class="modal modal-fixed-footer">
+
+	<div class="modal-content">
+		<h5>SEND REQUEST</h5>
+		<h6>PLOT 1</h6>
+		<div class="container">
+			  <div>
+			    <form>
+			    	<div class="row">
+			    	    <div class="input-field col s12">
+			    			<input placeholder="Fertilizer Information" id="fertilizerInfo" type="text" class="validate">
+			        		<label for="fertilizerInfo">Fertilizer Information</label>
+			        	</div>
+			        </div>
+			        <div class="row">
+			    	    <div class="input-field col s12">
+			    			<input placeholder="Name" id="name" type="text" class="validate">
+			        		<label for="Name">Name</label>
+			        	</div>
+			        </div>
+			        <div class="row">
+			    	    <div class="input-field col s4">
+			    			<input placeholder="Nitrogen" id="nit" type="text" class="validate">
+			        		<label for="nit">N</label>
+			        	</div>
+			    	    <div class="input-field col s4">
+			    			<input placeholder="Phosphorus" id="pos" type="text" class="validate">
+			        		<label for="pos">P</label>
+			        	</div>
+			    	    <div class="input-field col s4">
+			    			<input placeholder="Potassium" id="pot" type="text" class="validate">
+			        		<label for="pot">K</label>
+			        	</div>
+			        </div>
+			        <div class="row">
+			    	    <div class="input-field col s6">
+			    			<input placeholder="Planned Date" id="plannedDate" type="text" class="validate">
+			        		<label for="plannedDate">Planned Date</label>
+			        	</div>
+			    	    <div class="input-field col s6">
+			    			<input placeholder="Actual Date" id="actualDate" type="text" class="validate">
+			        		<label for="actualDate">Actual Date</label>
+			        	</div>
+			        </div>
+			    	<div class="row">
+			    	    <div class="input-field col s12">
+			    			<input placeholder="Personnel" id="personnel" type="text" class="validate">
+			        		<label for="personnel">Personnel</label>
+			        	</div>
+			        </div>
+			    </form>
+			  </div>
+		</div>
+	</div>
+
+	<div class="modal-footer">
+		<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">SEND</a>
+	</div>
+</div>

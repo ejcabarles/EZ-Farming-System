@@ -1,0 +1,20 @@
+{
+  "name": "front-end",
+  "homepage": "https://github.com/ejcabarles/EZ-Farming-System",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "Materialize": "materialize#^0.97.6",
+    "angular-materialize": "^0.1.8",
+    "angular-local-storage": "^0.2.7"
+  }
+}

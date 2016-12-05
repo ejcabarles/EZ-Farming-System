@@ -1,0 +1,26 @@
+{
+  "name": "EASYFARMINGSYSTEM",
+  "version": "1.0.0",
+  "description": "CMSC 127 PROJECT 1st SEM 2016-2017",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "bower": "^1.7.9",
+    "express": "^4.13.4",
+    "mysql": "^2.10.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node back-end/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ejcabarles/EZ-Farming-System"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ejcabarles/EZ-Farming-System/"
+  },
+  "homepage": "https://github.com/ejcabarles/EZ-Farming-System#readme"
+}
